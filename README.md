@@ -251,20 +251,6 @@ We can use any register between a0 and a7. We initialize the registers a4 and a3
 
 ![image](https://github.com/user-attachments/assets/c951d918-dc87-4a0d-9fc6-7e67119ee350)
 
-RV_D2SK2_L2_Review ASM Function Call
-
-Now we have to write 2 codes, one in C(.c) and its ASM(.S).
-
-![image](https://github.com/user-attachments/assets/2084c9ea-d621-4a2d-a865-b8b50180b5f6)
-
-![image](https://github.com/user-attachments/assets/0d59362f-5747-4b89-a9cb-5881f61e475c)
-
-![image](https://github.com/user-attachments/assets/5a70eed0-6ee8-4786-8931-8dbff60e4387)
-
-RV_D2SK2_L3_Simulate New C Program With Function Call
-
-![image](https://github.com/user-attachments/assets/f23430fa-9a3c-476d-96a9-ba79777d71a3)
-
 RV-D2SK3 - Basic verification flow using iverilog  
 RV_D2SK3_L1_Lab To Run C-Program On RISC-V CPU  
 
