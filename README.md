@@ -47,23 +47,21 @@ Also we will be looking into 64 bit representation of the signed and unsigned in
 RV-D1SK2 - Labwork for RISC-V software toolchain  
 RV_D1SK2_L1_C Program To Compute Sum From 1 to N  
 
-![image](https://github.com/user-attachments/assets/29ca2079-d98f-448f-978e-0da78f3adfdd)
+![Screenshot from 2025-03-06 20-14-26](https://github.com/user-attachments/assets/88a8bc3e-1d00-45e5-a621-e1eb85e80b4a)
+
 
 RV_D1SK2_L2_RISCV GCC compile And Disassemble
 
 We will try to see the assemble code of the C program that we wrote. When we type this command, it will give a bunch of assembly codes.
 
-![image](https://github.com/user-attachments/assets/e329df34-09c3-4b0d-83e3-e3a7ba58bb06)
+![Screenshot from 2025-03-06 20-36-29](https://github.com/user-attachments/assets/5657c89d-807e-461d-b519-7ad81ddd16bb)
+
 
 So, we will change the code to show less
 
-![image](https://github.com/user-attachments/assets/28a14faf-032a-492a-973d-bee81cf51084)
-
-![image](https://github.com/user-attachments/assets/dd530696-8be5-46ce-b30e-35e5ad1db2a8)
-
 There are many things shown. But, we are interested in the 'main' section, so type '/main' and click 'n'. Here, the address of the 'main' is 10184(in video) and there are 15 instructions inside the 'main' when we use the option '-o1' in the command. If we wish to count the instructions without counting one by one, subtract 101c0 and 10184 and divide the resultant by 4. Because, If we look into the instructions, it increment by 4.
 
-![image](https://github.com/user-attachments/assets/6f43dcf5-2c03-4903-a0c5-5eedee9f19fa)
+![Screenshot from 2025-03-08 16-29-42](https://github.com/user-attachments/assets/b245f0ac-8599-4024-8f48-4297a362a5f0)
 
 Now we are running the same command by replacing '-o1' by '-ofast'. Now the number of instructions will be higher or lesser.
 
@@ -73,17 +71,17 @@ We use './a.out' to get the output in 'c'. Now we will see what command to use t
 pc->program counter  
 We want our program to run till above the main and after that we will debug manually. To run till above the main we use the command 'until pc 0 address_of_main'. In this case(in video) it is, 'until pc 0 100b0'.  To find the contents of 'a2', we use the command 'reg 0 a2'. If we press enter, next instruction will run. And again if we run 'reg 0 a2', it gets modified. 'lui' means load upper intermediate which means, the data present in the right side of the instruction is loaded to the left side register from 12 to 31 bits.
 
-![image](https://github.com/user-attachments/assets/dd47723d-9bd3-4cad-828d-5c64144aa7c0)
+![Screenshot from 2025-03-08 16-33-00](https://github.com/user-attachments/assets/703458e6-484d-41bc-9a2e-22e00fa24a26)
+
 
 ![image](https://github.com/user-attachments/assets/dd5c650a-7f45-4cdc-a996-b9c304bbaf08)
 
 Here we are interested to know what is the value of 'sp' before running that instruction. So we quit it run from the beginning.
 
-![image](https://github.com/user-attachments/assets/04b3d308-cc9b-4133-9d6e-e3ffb4edca13)
 
 When we do that, 10 is subtracted from the value as shown below.
 
-![image](https://github.com/user-attachments/assets/d3304945-53f6-4cdf-8a47-6403cc83f5ae)
+![Screenshot from 2025-03-08 17-26-49](https://github.com/user-attachments/assets/cf66daec-e7e5-46dd-bc6b-e204e4bc9cc6)
 
 What does 'addi' will do?. it will add the source register and 'imm' and store it in the destination register.
 
@@ -142,17 +140,10 @@ RV_D1SK3_L3_Lab For Signed And Unsigned Numbers
 ![image](https://github.com/user-attachments/assets/bf80b185-55d7-4f04-b28c-91120924278b)
 
 My works
-![image](https://github.com/user-attachments/assets/dd3744b3-cabf-4021-b01f-e4bf43ec3523)
+![image](https://github.com/user-attachments/assets/ff82eb7c-e983-4ea2-9d17-34bb96609b31)
+![image](https://github.com/user-attachments/assets/63a8422d-c70c-49e4-b523-e4fbb6a88b58)
 
-![image](https://github.com/user-attachments/assets/efb65317-8c10-4031-9c43-8deb9c3c6404)
-
-![image](https://github.com/user-attachments/assets/8c215125-f33c-46c2-b360-ea4de0ba8892)
-
-![image](https://github.com/user-attachments/assets/e2b95c7d-d0e5-4ee8-a2eb-e40e41b052cb)
-
-![image](https://github.com/user-attachments/assets/cd5f8eca-862d-4e90-9bec-6aeb06ffe873)
-
-![image](https://github.com/user-attachments/assets/c093310f-f7de-4c91-8629-091a691ee8c5)
+![Screenshot from 2025-03-08 21-32-41](https://github.com/user-attachments/assets/12a41f98-3955-451d-9386-509b0c3a4d0a)
 
 RV Day 2 - Introduction to ABI and basic verification flow  
 RV-D2SK1 - Application Binary interface (ABI)  
@@ -337,6 +328,10 @@ RV Day 3 - Digital Logic with TL-Verilog and Makerchip
 RV-D3SK1 - Combinational logic in TL-Verilog using Makerchip  
 RV_D3SK1_L0_Welcome  
 
+Makerchip introduces ground breaking capabilities for advanced Verilog design, it also makes circuit design easy fun! For this Makerchip provides free and instant access to the latest tools (both the open-source and proprietary ones) from the browser in a local system. One can easily code, compile, simulate, and debug verilog design by using the makerchip IDE platform from the browrser iteslf. Makerchip platform provides a seamless design experience as the code,log file, block diagrams, waveforms, and novel visualisation are highly organised, tightly integrated and debugging is easy.
+
+Makerchip supports the emerging Transaction-Level Verilog or TL-Verilog standard which is a huge step forward as it allows simpler coding. As the coding becomes lesser faster development, fewer bugs, easier maintenance, and better quality silicon becomes possible. TL-Verilog adds powerful constructs for pipelines and transactions. A number of examples available in Makerchip which can be found here.
+
 ![image](https://github.com/user-attachments/assets/583b8fd0-9945-45c7-b707-dee639fcf39f)
 
 TL(Transaction level) verilog is a language extension to verilog.
@@ -372,18 +367,20 @@ The below shown is the ternary operator.
 
 RV_D3SK1_L3_Labs For Combinational Logic
 
-![image](https://github.com/user-attachments/assets/4335a59c-e991-4baa-8bfe-0a7a3448547d)
+![image](https://github.com/user-attachments/assets/01107fdc-56de-48c4-b4a0-a339ce43001b)
+
 
 My screenshot
-![image](https://github.com/user-attachments/assets/677e5b2e-4310-4d13-b51e-ea0d07ae8c8d)
+![Screenshot 2025-03-09 142806](https://github.com/user-attachments/assets/8aeb14d8-cdcf-4ba1-ad95-6ebef132ce58)
 
 ![image](https://github.com/user-attachments/assets/050dc6df-9e83-4764-80bc-9600b7563738)
 
 Inverter 
-![image](https://github.com/user-attachments/assets/4bb1ab04-1940-496d-ac23-d257b06d8923)
+![Screenshot 2025-03-09 144254](https://github.com/user-attachments/assets/549ffa14-0218-4f95-8a0d-0761865fdbcb)
 
 2-input AND gate
-![image](https://github.com/user-attachments/assets/13408781-07be-43fc-b009-e0fd37f62947)
+![Screenshot 2025-03-09 144510](https://github.com/user-attachments/assets/0c36048f-c8a5-43d7-adab-8a842a4d88fa)
+
 
 ![image](https://github.com/user-attachments/assets/65a2fa62-4825-4c20-bd83-a54f78928237)
 
@@ -393,7 +390,8 @@ Inverter
 ![image](https://github.com/user-attachments/assets/86038b54-13fd-4621-b8e8-75d559ee36cc)
 
 My work
-![image](https://github.com/user-attachments/assets/689955ea-00bb-45b3-9037-29e1fd513c0b)
+
+![Screenshot 2025-03-09 193442](https://github.com/user-attachments/assets/85d7be37-33d2-4dfa-abed-944cca09b330)
 
 RV-D3SK2 - Sequential logic  
 RV_D3SK2_L1_Introduction To Sequential Logic And Counter Lab  
@@ -407,7 +405,8 @@ RV_D3SK2_L1_Introduction To Sequential Logic And Counter Lab
 ![image](https://github.com/user-attachments/assets/a538cb3a-db27-446e-bd3e-2fc0cba0a8a1)
 
 My fibnacci series
-![image](https://github.com/user-attachments/assets/defb5df2-0dba-4bf8-86d6-bb3fde258efe)
+![Screenshot 2025-03-09 195849](https://github.com/user-attachments/assets/84bdabb7-bd99-47c7-9894-c23ab1c7fc36)
+
 
 RV_D3SK2_L2_Sequential Calculator Lab
 
@@ -418,6 +417,9 @@ RV_D3SK2_L2_Sequential Calculator Lab
 RV-D3SK3 - Pipelined logic
 RV_D3SK3_L1_Pipelined Logic And Re-Timing
 
+Pipelining or timing abstract is an important feature in TL verilog as it can be implemented very easily with fewer codes as compared to system verilog which reduces bugs to a great extent. An example of the pipeling for pythogoras theorem using both TL verilog and system verilog is shown here. In TL verilog pipteling can be implemented by defining the pipeline as |calc and the different pipeline stages should be properly align and are indicated by @1, @2 and so on.
+
+Here the first pipeline stage consists of the input followed by arithimetic operation in the second pipeline stage and finally the ouput is included 2 cycles ahead in the third pipeline stage.
 ![image](https://github.com/user-attachments/assets/944e010a-2443-48b7-b0ff-b57d90607685)
 
 ![image](https://github.com/user-attachments/assets/8b141a0a-5ee0-47d4-8c29-96ad3951fb38)
@@ -437,8 +439,9 @@ Below code is shown for retiming in SV which seems complex than TL.
 ![image](https://github.com/user-attachments/assets/582a01ee-fd0d-43a4-897d-ee2486290f2e)
 
 My work
-![image](https://github.com/user-attachments/assets/a4a4c8d5-5f2b-4cb8-b668-6112ac0e18eb)
-![image](https://github.com/user-attachments/assets/31723a5f-25c0-41ac-9520-f15135f1a6ab)
+![Screenshot 2025-03-13 070311](https://github.com/user-attachments/assets/d944f683-fe78-4500-a55d-35ece1d40a66)
+![Screenshot 2025-03-13 071344](https://github.com/user-attachments/assets/100e02ab-9dd6-4f4d-be22-08b238ad7087)
+
 
 RV_D3SK3_L2_Pipeline Logic Advantages And Demo In Platform
 
@@ -472,12 +475,13 @@ RV_D3SK3_L4_Lab On 2-Cycle Calculator
 ![image](https://github.com/user-attachments/assets/9ecb2d23-95fd-49f7-9c4e-5bce03fa8362)
 
 My work
-![image](https://github.com/user-attachments/assets/67dd85ef-dbe6-4a14-869f-58872488f9c8)
+![cropped_image](https://github.com/user-attachments/assets/139cccea-38fe-470f-af9c-4a5ccd904c2e)
+
 
 RV-D3SK4 - Validity  
 RV_D3SK4_L1_Introduction To Validity And Its Advantages  
 
-Validity concept is not exist in RTL languages. Here, '?' means 'when', so '?$valid' means, when valid.
+Validity concept is not exist in RTL languages. Here, '?' means 'when', so '?$valid' means, when valid.Validity is another feature in TL verilog which is asserted if a particular transactions in a pipeline is valid or true. A new scope, called “when” scope is introduced for this and it is denoted as ?$valid. This new scope has many advantages - easier design, cleaner debug, better error checking and automated clock gating. 
 
 ![image](https://github.com/user-attachments/assets/c7457a78-e3fd-4c13-a500-2fc7e2378c60)
 
@@ -540,14 +544,17 @@ RV_D4SK1_L3_Starting Point Code for RISC-V Labs Part-2
 RV-D4SK2 - Fetch and decode  
 RV_D4SK2_L1_Implementation Plan and Lab for PC  
 
+
 We will implement the cpu as mentioned in the below diagram.
 
 ![image](https://github.com/user-attachments/assets/2390c907-ee85-4b7f-ab9d-d84e8c6b57a3)
 
 My work
-![image](https://github.com/user-attachments/assets/18a48b1a-5e6d-46d4-942c-2832146e037a)
+![Screenshot 2025-03-13 100812](https://github.com/user-attachments/assets/02e54213-1e41-4387-b055-5cb5d185c106)
 
 RV_D4SK2_L2_Lab For Instruction Fetch Logic
+
+During the fetch stage, processors fetches the instruction from the memory to the address pointed by the program counter. The program counters holds the address of the next stage, in our case it is after 4 cycle and the instruction memory holds the set of instruction to be executed.
 
 ![image](https://github.com/user-attachments/assets/edceaafe-109a-48ae-82af-243c279d7cc8)
 
@@ -564,24 +571,37 @@ RV_D4SK2_L4_Lab For Instruction Immediate Decode Logic For RV-ISBUJ
 
 Now we will see from where the immediate value will be taken for different instructions.
 
+For decoding a particular instruction, it is necessary that the isntruction type and format is known to the processor. The decoding is a crucial part and has to be done properly according to the given format to avoid error. There are 6 instructions type in RISC-V :
+
+1.Register (R) type
+2.Immediate (I) type
+3.Store (S) type
+4.Branch (B) type
+5.Upper immediate (U) type
+6.Jump (J) type
+
+Following the decoding of the above, the instruction immediate decode for all the above, except the register type is added. The 6 others instruction format/fields including the opcode, 2 source register, destination register, funct3 and funct7 decode is included. Next the instruction field decode of the different instruction type is inserted to ensure that only valid registers are used. Finally the base instruction set decode for the various fields is incorporated. The instruction type and format is as shown in figure below and is sourced from here.
+
+
 ![image](https://github.com/user-attachments/assets/617c3b5f-0c04-4a52-a064-ece07330057c)
 
 My work
-![image](https://github.com/user-attachments/assets/61596b96-500f-42c0-a35c-e9cd58a9fbf8)
+![cropped_image (1)](https://github.com/user-attachments/assets/7db31a74-1824-4ca6-9689-7fa0cb24e0e0)
 
 RV_D4SK2_L5_Lab To Decode other Fields of Instructions For RV-ISBUJ
 
 ![image](https://github.com/user-attachments/assets/9079c6f8-9ac8-4e90-8d0b-2cae88951f3b)
 
 My work
-![image](https://github.com/user-attachments/assets/051be781-289c-41ed-8b60-e93d06c03abd)
+![cropped_image (2)](https://github.com/user-attachments/assets/17f775d6-0d81-4851-bbef-0fa201376cbf)
+
 
 RV_D4SK2_L6_Lab To Decode Instruction Field Based on Instr Type RV-ISBUJ
 
 ![image](https://github.com/user-attachments/assets/0f1a7a26-e05b-4207-88f6-09150e347c28)
 
 My work
-![image](https://github.com/user-attachments/assets/efff7143-d80a-4540-b6a8-5970abc9311a)
+![cropped_image (6)](https://github.com/user-attachments/assets/a0505e81-136e-4417-9ad1-f77aee68ad49)
 
 RV_D4SK2_L7_Lab To Decode Individual Instruction
 
@@ -591,10 +611,14 @@ Now we are using the instructions that are highly required for our purpose and i
 ![image](https://github.com/user-attachments/assets/e6bb4561-827f-48ca-b44c-39f3dba3c4c0)
 
 My work
-![image](https://github.com/user-attachments/assets/af23be79-9385-408d-91ec-dceda9622006)
+![image](https://github.com/user-attachments/assets/87288a8a-ffa7-45eb-b7e3-8745a18b7dc4)
 
 RV-D4SK3 - RISC-V control logic  
 RV_D4SK3_L1_Lab For Register File Read Part1 (USE UPDATED SHELL CODE)  
+
+The next task is to 'read from' and 'write into' the registers. In this operation, 2 read and write operation can be carried out simulatenously. The two src1_value/src2_value takes input from the two read register rf_read_data1/ rf_read_data2 and pass it on to the ALU unit. At present, ADDI and ADD is execute whose result is obtained in register rf_write_data. The figure below shows the input and output registers.
+
+
 
 rd -> destination register  
 
@@ -629,6 +653,8 @@ RV_D4SK3_L5_Concept of Array And Register File Details
 
 RV_D4SK3_L6_Lab For Implementing Branch Instructions
 
+The next stage in the building of the RISC-V microarchitecture, is the addition of branches. Apart from immediate addition or addition, there may certain other conditions to be satisfied which requires to direct the PC to the branch target address. Now, we have simply added few branch instruction and updated the PC. 
+
 ![image](https://github.com/user-attachments/assets/17236023-6846-4028-bdd4-00bf572484e0)
 
 My work
@@ -639,7 +665,7 @@ RV_D4SK3_L7_Lab For Completing Branch Instruction Implementation
 ![image](https://github.com/user-attachments/assets/52672ce2-d174-42c9-a111-c244bfd329da)
 
 My work
-![image](https://github.com/user-attachments/assets/2ef7652f-5e79-4b4a-a034-0a0f10f5c5f0)
+![cropped_image (5)](https://github.com/user-attachments/assets/a0c196f1-4bde-428f-a97f-49a4e1652445)
 
 RV_D4SK3_L8_Lab To Create Simple Testbench
 
@@ -649,7 +675,7 @@ RV Day 5 - Complete Pipelined RISC-V CPU micro-architecture
 RV-D5SK1 - Pipelining the CPU  
 RV_D5SK1_L1_Introduction To Control Flow Hazard And Read After Write Hazard  
 
-Finally we are going to add pipeline to our CPU. With verilog it is very difficult. But, with TL verilog, it is easy.
+Now pipelining of the CPU core is done, which allows easy retiming and reduces functional bug to a great extent . Pipelining allows faster computaion. For pipelining as mentioned earlier we simply need to add @1, @2 and so on. The snapshot of the pipelining is as shown below. In TL verilog, another advantage is defining of pipeline in systematic order is not necessary. More inforamtion on timming abstract can be found in the IEEE paper "Timing-Abstract Circuit Design in Transaction-Level Verilog" by Steeve Hoover in makerchip platform itself or else here.
 
 ![image](https://github.com/user-attachments/assets/51a2c694-b183-4218-a9b2-834508a7c59a)
 
@@ -712,10 +738,14 @@ RV_D5SK2_L4_Lab To Code Complete ALU
 ![image](https://github.com/user-attachments/assets/b9b7ac61-ae2c-4648-9288-7e7660f4b05f)
 
 My work
-![image](https://github.com/user-attachments/assets/e18efab9-6609-4c91-8ec7-9f5d9df54af6)
+![cropped_image (7)](https://github.com/user-attachments/assets/852e394e-fb60-439e-87a5-e520ff19a49b)
 
 RV-D5SK3 - Load/Store Instructions and Completing RISC-V CPU  
 RV_D5SK3_L1_Introduction To Load Store Instructions And Lab To Redirect Loads  
+
+The load and store option is also included for which a 1 read/write data memory is added. Similar to branch instruction the load also has 3 cycle delay. For checking the functionality of load and store instructions a test bench is added and the data is on address 4 of Data Memory and loaded that value from Data Memory to r17. 
+
+
 
 ![image](https://github.com/user-attachments/assets/58454c9d-aed0-48bf-b7d8-78af4c51f0d3)
 
