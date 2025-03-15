@@ -158,8 +158,6 @@ RV_D1SK3_L3_Lab For Signed And Unsigned Numbers
 ![image](https://github.com/user-attachments/assets/bf80b185-55d7-4f04-b28c-91120924278b)
 
 My works
-![image](https://github.com/user-attachments/assets/ff82eb7c-e983-4ea2-9d17-34bb96609b31)
-![image](https://github.com/user-attachments/assets/63a8422d-c70c-49e4-b523-e4fbb6a88b58)
 
 ![Screenshot from 2025-03-08 21-32-41](https://github.com/user-attachments/assets/12a41f98-3955-451d-9386-509b0c3a4d0a)
 
