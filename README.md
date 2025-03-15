@@ -87,8 +87,7 @@ What does 'addi' will do?. it will add the source register and 'imm' and store i
 
 ![image](https://github.com/user-attachments/assets/6ac0a0e3-e2af-4341-8be1-3d59ac38dd98)
 
-My work
-![image](https://github.com/user-attachments/assets/ef5783f0-6ef2-4415-9fa1-ae767c4fe23c)
+
 
 RV-D1SK3 - Integer number representation  
 RV_D1SK3_L1_64-bit Number System For Unsigned Numbers  
