@@ -4,6 +4,25 @@ RV Day 1 - Introduction to RISC-V ISA and GNU compiler toolchain
 RV-D1SK1 - Introduction to RISC-V basic keywords  
 RV_D1SK1_L1_Introduction  
 
+RISC-V ISA is a base integer ISA and must be present in any implemenatation along with some optional extension. The RISC-V has been designed to support extensive customization and specialization which can be extended with one or more optional instruction-set extensions, but the base integer instructions cannot be redefine. The different instructions included in RISC-V are listed below.
+
+
+types are
+
+Pseudo instructions
+Base integer instruction (RV64I, RV32I)
+Multiply extension (RV64M)
+Single and double floating point instruction (RV64F, RV64D)
+Application binary instruction
+Memory allocation and stack pointer
+The detail of the RISC-V instructions set manual can be found here.
+
+Each base integer set is characterized by the width of the register (XLEN) and size of the user address space. The most important advantage of RISC-V is that it is an open standard instruction which is easily available for academics and commercial purposes free of cost. The main github link of RISC-V is https://github.com/riscv which is a hub of the different repositories related to RISC-V.
+
+# GNU compile toolchain
+The GNU compile toolchain is a set of programming tools in LINUX system that can be use for compiling a code to generate certain executable program, library and debugger and whose detail can be found in 1 and 2. RISC-V is one such toolchain which supports C and C++ cross compiler. It supports two build modes: a generic ELF/Newlib toolchain and a more sophisticated Linux-ELF/glibc toolchain and here the github link for the same can be found.
+
+To start off a c program to compile sum from 1 to n was written whose file is in the codes folder as sum1to9.c. The program is compiled using both the gcc compiler and RISC-V compiler. For normal gcc compiliation simply gcc <filename.c> is executed in the terminal generating an object file a.out and ./a.out is use to further run it.
 ![image](https://github.com/user-attachments/assets/41f357e0-1ef4-4179-a2b8-b4872ea530e4)
 
 RV_D1SK1_L2_From Apps To Hardware
